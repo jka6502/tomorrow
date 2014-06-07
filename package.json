@@ -1,0 +1,25 @@
+{
+  "name": "tomorrow",
+  "preferGlobal": false,
+  "version": "0.1.0",
+  "author": "James Andrews <jka6502@gmail.com>",
+  "description": "resolve on use promises",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jka6502/tomorrow.git"
+  },
+  "main": "",
+  "keywords": [
+    "promise",
+    "fibers",
+    "async"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  },
+  "dependencies": {
+    "fibers": "1.x.x"
+  }
+}
