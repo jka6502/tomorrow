@@ -21,6 +21,6 @@
   },
   "dependencies": {
     "fibers": "1.x.x",
-    "harmonize": "^1.33.7"
+    "harmonize": "1.x.x"
   }
 }
