@@ -4,15 +4,15 @@
 
 	// TEMPORARY TEST FILE
 
-	var Tomorrow	= require('./lib/tomorrow');
+	var tomorrow	= require('./lib/tomorrow');
 
 
 
-	Tomorrow.start(function() {
+	tomorrow(function() {
 
-		var readFile = Tomorrow.wrap(require('fs').readFile);
+		var readFile = tomorrow.wrap(require('fs').readFile);
 
-		var timeout = Tomorrow.wrap(setTimeout, 0);
+		var timeout = tomorrow.wrap(setTimeout, 0);
 		var madness = timeout(2000);
 
 		function delayResponse(callback) {
@@ -21,7 +21,7 @@
 			}, 1000);
 		}
 
-		var hello = Tomorrow.wrap(delayResponse)();
+		var hello = tomorrow.wrap(delayResponse)();
 
 		var result = readFile('./package.json');
 
@@ -30,7 +30,7 @@
 
 		console.log('Hello:', hello());
 
-		console.log('Timeout resolved...', Tomorrow.wait(madness), 'of course');
+		console.log('Timeout resolved...', tomorrow.wait(madness), 'of course');
 
 		function getMeFiles() {
 			return readFile('non-existant.wut?');
