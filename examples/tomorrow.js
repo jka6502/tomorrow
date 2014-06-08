@@ -4,7 +4,7 @@
 
 	// TEMPORARY TEST FILE
 
-	var tomorrow	= require('./lib/tomorrow');
+	var tomorrow	= require('../lib/tomorrow');
 
 
 

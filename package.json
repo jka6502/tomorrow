@@ -4,12 +4,14 @@
   "version": "0.1.0",
   "author": "James Andrews <jka6502@gmail.com>",
   "description": "resolve on use promises",
-  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/jka6502/tomorrow.git"
   },
   "main": "",
+  "scripts": {
+    "test": "node test/all.js"
+  },
   "keywords": [
     "promise",
     "fibers",
@@ -22,5 +24,11 @@
   "dependencies": {
     "fibers": "1.x.x",
     "harmonize": "1.x.x"
+  },
+  "devDependencies": {
+    "glob": "^4.0.2",
+    "mocha": "^1.20.1",
+    "should": "^4.0.1",
+    "sinon": "^1.10.2"
   }
 }

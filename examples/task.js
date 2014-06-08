@@ -1,13 +1,14 @@
 (function() {
 
 
-	var tomorrow	= require('./lib/tomorrow'),
+	var tomorrow	= require('../lib/tomorrow'),
+		task		= require('../lib/task'),
+		sleep		= require('../lib/sleep');
+
 		wait		= tomorrow.wait,
 
-		task		= require('./lib/task'),
 		method		= task.method,
-		series		= task.series,
-		sleep		= task.sleep;
+		series		= task.series;
 
 
 	function TestClass() {}
@@ -52,6 +53,8 @@
 		})
 
 	}
+
+
 
 
 	function subtask() {
@@ -104,6 +107,26 @@
 
 			var thing = new TestClass();
 			thing.doTheThing();
+
+			task1 = method.task(function() {
+				task2();
+			});
+
+			task2 = method.task(function() {
+				task3();
+			});
+
+			task3 = method.task(function() {
+				task4();
+			});
+
+			task4 = method.task(function() {
+				throw new Error('Balls...');
+			});
+
+
+			task1();
+
 		});
 
 	});
