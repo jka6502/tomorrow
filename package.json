@@ -20,6 +20,7 @@
     "node": ">=0.6"
   },
   "dependencies": {
-    "fibers": "1.x.x"
+    "fibers": "1.x.x",
+    "harmonize": "^1.33.7"
   }
 }

@@ -4,13 +4,11 @@
 
 	// TEMPORARY TEST FILE
 
-
-	var Fiber		= require('fibers'),
-		Tomorrow	= require('./lib/tomorrow');
+	var Tomorrow	= require('./lib/tomorrow');
 
 
 
-	(Fiber(function() {
+	Tomorrow.start(function() {
 
 		var readFile = Tomorrow.wrap(require('fs').readFile);
 
@@ -40,7 +38,7 @@
 
 		console.log(getMeFiles());
 
-	})).run();
+	});
 
 	console.log("I can haz other paths?");
 
